@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <manifest package="org.ekkescorner.examples.sharex" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.1.0" android:versionCode="211001010" android:installLocation="auto">
-    <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="ekkes SHARE Example">
-        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="org.ekkescorner.examples.sharex.QShareActivity" android:label="ekkes SHARE Example" android:screenOrientation="unspecified" android:launchMode="singleInstance" android:taskAffinity="">
+    <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="QPayDay">
+        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="org.ekkescorner.examples.sharex.QShareActivity" android:label="QPayDay" android:screenOrientation="unspecified" android:launchMode="singleInstance" android:taskAffinity="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
