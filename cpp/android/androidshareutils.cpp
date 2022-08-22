@@ -35,7 +35,7 @@ AndroidShareUtils* AndroidShareUtils::getInstance()
 bool AndroidShareUtils::checkMimeTypeView(const QString &mimeType)
 {
     QAndroidJniObject jsMime = QAndroidJniObject::fromString(mimeType);
-    jboolean verified = QAndroidJniObject::callStaticMethod<jboolean>("org/ekkescorner/utils/QShareUtils",
+    jboolean verified = QAndroidJniObject::callStaticMethod<jboolean>("org/darakuta/payday/utils/QShareUtils",
                                               "checkMimeTypeView",
                                               "(Ljava/lang/String;)Z",
                                               jsMime.object<jstring>());
@@ -46,7 +46,7 @@ bool AndroidShareUtils::checkMimeTypeView(const QString &mimeType)
 bool AndroidShareUtils::checkMimeTypeEdit(const QString &mimeType)
 {
     QAndroidJniObject jsMime = QAndroidJniObject::fromString(mimeType);
-    jboolean verified = QAndroidJniObject::callStaticMethod<jboolean>("org/ekkescorner/utils/QShareUtils",
+    jboolean verified = QAndroidJniObject::callStaticMethod<jboolean>("org/darakuta/payday/utils/QShareUtils",
                                                   "checkMimeTypeEdit",
                                                   "(Ljava/lang/String;)Z",
                                                   jsMime.object<jstring>());
@@ -58,7 +58,7 @@ void AndroidShareUtils::share(const QString &text, const QUrl &url)
 {
     QAndroidJniObject jsText = QAndroidJniObject::fromString(text);
     QAndroidJniObject jsUrl = QAndroidJniObject::fromString(url.toString());
-    jboolean ok = QAndroidJniObject::callStaticMethod<jboolean>("org/ekkescorner/utils/QShareUtils",
+    jboolean ok = QAndroidJniObject::callStaticMethod<jboolean>("org/darakuta/payday/utils/QShareUtils",
                                               "share",
                                               "(Ljava/lang/String;Ljava/lang/String;)Z",
                                               jsText.object<jstring>(), jsUrl.object<jstring>());
@@ -84,7 +84,7 @@ void AndroidShareUtils::sendFile(const QString &filePath, const QString &title, 
         QAndroidJniObject jsPath = QAndroidJniObject::fromString(filePath);
         QAndroidJniObject jsTitle = QAndroidJniObject::fromString(title);
         QAndroidJniObject jsMimeType = QAndroidJniObject::fromString(mimeType);
-        jboolean ok = QAndroidJniObject::callStaticMethod<jboolean>("org/ekkescorner/utils/QShareUtils",
+        jboolean ok = QAndroidJniObject::callStaticMethod<jboolean>("org/darakuta/payday/utils/QShareUtils",
                                                   "sendFile",
                                                   "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z",
                                                   jsPath.object<jstring>(), jsTitle.object<jstring>(), jsMimeType.object<jstring>(), requestId);
@@ -206,7 +206,7 @@ void AndroidShareUtils::viewFile(const QString &filePath, const QString &title, 
         QAndroidJniObject jsPath = QAndroidJniObject::fromString(filePath);
         QAndroidJniObject jsTitle = QAndroidJniObject::fromString(title);
         QAndroidJniObject jsMimeType = QAndroidJniObject::fromString(mimeType);
-        jboolean ok = QAndroidJniObject::callStaticMethod<jboolean>("org/ekkescorner/utils/QShareUtils",
+        jboolean ok = QAndroidJniObject::callStaticMethod<jboolean>("org/darakuta/payday/utils/QShareUtils",
                                                   "viewFile",
                                                   "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z",
                                                   jsPath.object<jstring>(), jsTitle.object<jstring>(), jsMimeType.object<jstring>(), requestId);
@@ -316,7 +316,7 @@ void AndroidShareUtils::editFile(const QString &filePath, const QString &title, 
         QAndroidJniObject jsTitle = QAndroidJniObject::fromString(title);
         QAndroidJniObject jsMimeType = QAndroidJniObject::fromString(mimeType);
 
-        jboolean ok = QAndroidJniObject::callStaticMethod<jboolean>("org/ekkescorner/utils/QShareUtils",
+        jboolean ok = QAndroidJniObject::callStaticMethod<jboolean>("org/darakuta/payday/utils/QShareUtils",
                                                   "editFile",
                                                   "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z",
                                                   jsPath.object<jstring>(), jsTitle.object<jstring>(), jsMimeType.object<jstring>(), requestId);

@@ -13,7 +13,7 @@
 //
 // see also /COPYRIGHT and /LICENSE
 
-package org.ekkescorner.examples.sharex;
+package org.darakuta.qpayday;
 
 import org.qtproject.qt5.android.QtNative;
 
@@ -30,7 +30,7 @@ import android.util.Log;
 import android.content.ContentResolver;
 import android.webkit.MimeTypeMap;
 
-import org.ekkescorner.utils.*;
+import org.darakuta.qpayday.utils.*;
 
 
 

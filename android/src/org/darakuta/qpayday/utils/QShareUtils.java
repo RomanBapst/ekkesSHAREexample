@@ -10,7 +10,7 @@
 // https://stackoverflow.com/questions/5734678/custom-filtering-of-intent-chooser-based-on-installed-android-package-name
 // see also /COPYRIGHT and /LICENSE
 
-package org.ekkescorner.utils;
+package org.darakuta.qpayday.utils;
 
 import org.qtproject.qt5.android.QtNative;
 
@@ -45,7 +45,7 @@ import android.support.v4.app.ShareCompat;
 public class QShareUtils
 {
     // reference Authority as defined in AndroidManifest.xml
-    private static String AUTHORITY="org.ekkescorner.examples.sharex.fileprovider";
+    private static String AUTHORITY="org.darakuta.qpayday.fileprovider";
 
     protected QShareUtils()
     {
